@@ -1,8 +1,8 @@
-defmodule NervesSystemRpi4.MixProject do
+defmodule ExNVRSystemRpi4.MixProject do
   use Mix.Project
 
-  @github_organization "nerves-project"
-  @app :nerves_system_rpi4
+  @github_organization "evercam"
+  @app :ex_nvr_system_rpi4
   @source_url "https://github.com/#{@github_organization}/#{@app}"
   @version Path.join(__DIR__, "VERSION")
            |> File.read!()
@@ -100,6 +100,7 @@ defmodule NervesSystemRpi4.MixProject do
 
   defp package_files do
     [
+      "busybox_defconfig",
       "fwup_include",
       "rootfs_overlay",
       "CHANGELOG.md",
