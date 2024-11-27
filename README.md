@@ -3,7 +3,11 @@
 [![CircleCI](https://circleci.com/gh/nerves-project/nerves_system_rpi4.svg?style=svg)](https://circleci.com/gh/nerves-project/nerves_system_rpi4)
 [![Hex version](https://img.shields.io/hexpm/v/nerves_system_rpi4.svg "Hex version")](https://hex.pm/packages/nerves_system_rpi4)
 
-This is the base Nerves System configuration for the Raspberry Pi 4 Model B.
+This is a custom Nerves System configuration for the Raspberry Pi 4 Model B. The updates include:
+* Add support for `ext4` file system.
+* Add kernel support for GPT partitions.
+* Install `libsrtp` and `ffmpeg`.
+* Install the following linux utilities: `lsblk`, `fdisk`, `sgdisk`. 
 
 ![Raspberry Pi 4 image](assets/images/raspberry-pi-4-model-b.jpg)
 <br><sup>[Michael Henzler / Wikimedia Commons / CC BY-SA
