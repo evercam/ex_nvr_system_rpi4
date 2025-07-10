@@ -20,12 +20,7 @@ defmodule ExNVRSystemRpi4.MixProject do
       package: package(),
       deps: deps(),
       aliases: [loadconfig: [&bootstrap/1]],
-      docs: docs(),
-      preferred_cli_env: %{
-        docs: :docs,
-        "hex.build": :docs,
-        "hex.publish": :docs
-      }
+      docs: docs()
     ]
   end
 
@@ -37,6 +32,10 @@ defmodule ExNVRSystemRpi4.MixProject do
     set_target()
     Application.start(:nerves_bootstrap)
     Mix.Task.run("loadconfig", args)
+  end
+
+  def cli do
+    [preferred_envs: %{docs: :docs, "hex.build": :docs, "hex.publish": :docs}]
   end
 
   defp nerves_package do
@@ -68,7 +67,7 @@ defmodule ExNVRSystemRpi4.MixProject do
   defp deps do
     [
       {:nerves, "~> 1.11", runtime: false},
-      {:nerves_system_br, "1.31.0", runtime: false},
+      {:nerves_system_br, "1.31.3", runtime: false},
       {:nerves_toolchain_aarch64_nerves_linux_gnu, "~> 13.2.0", runtime: false},
       {:nerves_system_linter, "~> 0.4", only: [:dev, :test], runtime: false},
       {:ex_doc, "~> 0.22", only: :docs, runtime: false}
