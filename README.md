@@ -7,7 +7,7 @@
 This is a custom Nerves System configuration for the Raspberry Pi 4 Model B. The updates include:
 * Add support for `ext4` file system and `lvm`.
 * Add kernel support for GPT partitions.
-* Install `libsrtp`, `nginx` and `ffmpeg`.
+* Install `libsrtp`, `libx264`, `nginx` and `ffmpeg`.
 * Install the following linux utilities: `lsblk`, `fdisk`, `sgdisk`, `smartmontools` and `socat`. 
 
 ![Raspberry Pi 4 image](assets/images/raspberry-pi-4-model-b.jpg)
