@@ -12,6 +12,50 @@ follows:
    releases, and Linux kernel updates. They're also made to fix bugs and add
    features to the build infrastructure.
 
+## v1.33.0
+
+This is a major Buildroot and Linux update. It should be seamless for most
+1.32.0 users.
+
+* Changes
+  * Refresh `ramoops-overlay.dts`. This actually changes the default pstore
+    settings to reserve less DRAM based on experience of not needing nearly as
+    much. Settings can be overridden now via the `config.txt`.
+  * Use EEx to generate the `fwup.conf`. This removes a lot of repetition. If
+    you've made a custom `fwup.conf`, please review git commit log for details.
+  * Add 5" Raspberry Pi Touch Display overlay
+
+* Updated dependencies
+  * Linux 6.12.47
+  * [nerves_system_br 1.33.0](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.33.0)
+    * [Buildroot 2025.11](https://lore.kernel.org/buildroot/87bjk439tj.fsf@dell.be.48ers.dk/T/)
+    * [Erlang/OTP 28.3](https://erlang.org/download/OTP-28.3.README.md)
+    * [fwup 1.15.0](https://github.com/fwup-home/fwup/releases/tag/v1.15.0)
+    * [erlinit 1.15.1](https://github.com/nerves-project/erlinit/releases/tag/v1.15.1)
+    * [nerves_heart 2.5.0](https://github.com/nerves-project/nerves_heart/releases/tag/v2.5.0)
+    * [boardid 1.15.0](https://github.com/nerves-project/boardid/releases/tag/v1.15.0)
+
+## v1.32.0
+
+This is a major Erlang and Buildroot update. This updates from Erlang/OTP 27 to
+Erlang/OTP 28.
+
+* Changes
+  * Remove unneeded call to `rngd` and the `rng-tools` package. This was
+    formerly needed to provide entropy to Linux during initialization.
+
+* Package updates
+  * [nerves_system_br v1.32.3 release notes](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.32.3)
+
+* Updated dependencies
+  * [Erlang/OTP 28.1.1](https://erlang.org/download/OTP-28.1.1.README.md)
+  * [Buildroot 2025.05.2](https://lore.kernel.org/buildroot/7bed9b2e-a9d3-476b-84d6-61134e2f726f@rnout.be/T/)
+
+## v1.31.4
+
+* Changes
+  * Synchronize and fix Raspberry Pi camera settings
+
 ## v1.31.3
 
 This is an important security/bug fix that addresses Erlang CVEs for the ssh
@@ -932,4 +976,3 @@ the Raspberry Pi Foundation promotes 32-bit usage so that's what's used here.
   * Erlang 22.0.7
   * [nerves_system_br v1.8.4](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.8.4)
   * [nerves_toolchain_arm_unknown_linux_gnueabihf v1.2.0](https://github.com/nerves-project/toolchains/releases/tag/v1.2.0)
-

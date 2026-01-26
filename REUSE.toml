@@ -4,9 +4,9 @@ version = 1
 path = [
  ".formatter.exs",
  ".github/CODEOWNERS",
- ".github/workflows/ci.yml",
  ".gitignore",
  "CHANGELOG.md",
+ "nerves_defconfig",
  "NOTICE",
  "REUSE.toml",
  "mix.exs",
@@ -26,12 +26,13 @@ SPDX-FileCopyrightText = "2019 Frank Hunleth"
 SPDX-License-Identifier = "CC-BY-4.0"
 
 # Buildroot derived or related files
+# NOTE: packages here proactively have copyright assigned to the Buildroot
+# developers to avoid worrying about copyright assignment when upstreaming.
 [[annotations]]
 path = [
  "Config.in",
  "package/**",
  "external.mk",
- "nerves_defconfig",
  "post-build.sh",
  "post-createfs.sh"
 ]
@@ -42,9 +43,8 @@ SPDX-License-Identifier = "GPL-2.0-or-later"
 # Linux kernel derived or related files
 [[annotations]]
 path = [
- "linux/*",
- "linux-6.6.defconfig",
- "ramoops.dts"
+ "linux-6.12.defconfig",
+ "ramoops-pi4-overlay.dts"
 ]
 precedence = "override"
 SPDX-FileCopyrightText = "Various"
@@ -55,6 +55,7 @@ SPDX-License-Identifier = "GPL-2.0-only"
 path = [
  "fwup-ops.conf",
  "fwup.conf",
+ "fwup.conf.eex",
  "fwup_include/*"
 ]
 precedence = "aggregate"
