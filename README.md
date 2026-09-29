@@ -10,6 +10,9 @@ This is a custom Nerves System configuration for the Raspberry Pi 4 Model B. The
 * Install `libsrtp` and `nginx`.
 * Install the following linux utilities: `lsblk`, `fdisk`, `sgdisk`, `smartmontools` and `socat`. 
 
+*This is the v1 maintenance branch. It is still maintained and is the
+recommended branch for most users. Active development is in the `main` branch.*
+
 ![Raspberry Pi 4 image](assets/images/raspberry-pi-4-model-b.jpg)
 <br><sup>[Michael Henzler / Wikimedia Commons / CC BY-SA
 4.0](https://en.wikipedia.org/wiki/File:Raspberry_Pi_4_Model_B_-_Top.jpg)</sup>
